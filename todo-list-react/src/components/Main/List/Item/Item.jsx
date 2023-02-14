@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import './Item.css'
+
  
 class Item extends Component {
     constructor(props) {
@@ -10,10 +12,9 @@ class Item extends Component {
     }
 
     render() {
-        return (<div>
-            <p>Tarea: {this.props.data.tarea}</p>
-            <button onClick={this.props.remove}>Borrar Tarea</button>
-            <hr/>
+        return (<div id="tarea-container">
+            <p><strong>Tarea:</strong> {this.props.data.tarea}</p>
+            <button className='css-button-sliding-to-left--red' onClick={this.props.remove}>Borrar Tarea</button>
             </div>
         )
     }

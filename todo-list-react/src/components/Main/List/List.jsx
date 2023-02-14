@@ -65,17 +65,15 @@ class List extends Component {
         <h1>Añade una tarea:</h1>
         <form className="form-container" onSubmit={this.handleSubmit}>
           <label htmlFor="name"></label>
-          <input type= "text" id="name" name="name"/>
-          <input type="submit" value="ADD" />
+          <input className="css-input" type= "text" id="name" name="name"/>
+          <input type="submit" value="ADD" className="css-button-sliding-to-left--green"/>
         </form>
 
-        <h1>Lista de tareas</h1>
-        {/* <button onClick={this.addTodo}>Add Todo</button> */}
-        <p>Opciones:</p>
-        <button id="options-button" onClick={this.removeAllTodos}>Borrar todas las tareas</button>
-        <button id="options-button" onClick={this.restoreTodos}>Restaurar todas las tareas</button>
+        <h3>Opciones:</h3>
+        <button className="css-button-sliding-to-left--blue" onClick={this.removeAllTodos}>Borrar todas las tareas</button>
+        <button className="css-button-sliding-to-left--blue" onClick={this.restoreTodos}>Restaurar todas las tareas</button>
 
-        <h1>Tareas:</h1>
+        <h1>Lista de Tareas:</h1>
         {this.printCards()}
 
       </section>;

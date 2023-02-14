@@ -8,39 +8,130 @@
     font-weight: bold;
     margin-bottom: 10px;
 }
-    
-.form-container input[type="text"] {
-    margin-bottom: 10px;
-    border: 1px solid gray;
-    border-radius: 4px;
-    padding: 4px;
-}
-    
-.form-container input[type="submit"] {
-    background-color: green;
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 4px;
-    padding: 6px 12px;
-}
 
-button {
-    background-color: red;
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 4px;
-    padding: 6px 12px;
+.css-input {
+    padding: 8px;
+    font-size: 22px;
+    border-width: 1px;
+    border-color: #CCCCCC;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-style: ridge;
+    border-radius: 21px;
+    box-shadow: 20px 0px 11px rgba(66,66,66,.84);
+    text-shadow: -50px 0px 0px rgba(66,66,66,.0);
 }
+.css-input:focus {
+    outline:none;
+}
+.css-button-sliding-to-left--red {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    z-index: 0;
+    background: #fff;
+    overflow: hidden;
+    border: 2px solid #d90429;
+    color: #d90429;
+  }
+  .css-button-sliding-to-left--red:hover {
+    color: #fff;
+  }
+  .css-button-sliding-to-left--red:hover:after {
+    width: 100%;
+  }
+  .css-button-sliding-to-left--red:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: all 0.3s ease;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #d90429;
+  }
 
-#options-button {
-    background-color: blue;
-    color: white;
+
+.css-button-sliding-to-left--blue {
+    min-width: 130px;
+    margin: 20px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
     font-weight: bold;
-    border: none;
-    border-radius: 4px;
-    padding: 6px 12px;
-}
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    z-index: 0;
+    background: #fff;
+    overflow: hidden;
+    border: 2px solid #2c0b8e;
+    color: #2c0b8e;
+  }
+  .css-button-sliding-to-left--blue:hover {
+    color: #fff;
+  }
+  .css-button-sliding-to-left--blue:hover:after {
+    width: 100%;
+  }
+  .css-button-sliding-to-left--blue:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: all 0.3s ease;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #2c0b8e;
+  }
     
-    
+  .css-button-sliding-to-left--green {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    margin: 15px;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    z-index: 0;
+    background: #fff;
+    overflow: hidden;
+    border: 2px solid #57cc99;
+    color: #57cc99;
+  }
+  .css-button-sliding-to-left--green:hover {
+    color: #fff;
+  }
+  .css-button-sliding-to-left--green:hover:after {
+    width: 100%;
+  }
+  .css-button-sliding-to-left--green:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: all 0.3s ease;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #57cc99;
+  }  
