@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Item from "./Item/Item";
 import data from "./data.json";
 import { v4 as uuidv4 } from "uuid";
+import './List.css'
 
 console.log(data);
 
@@ -43,16 +44,36 @@ class List extends Component {
     this.setState({ todos: data });
   };
 
+  handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(e.target.name.value);
+    const tarea = e.target.name.value;
+
+    const newTarea = {
+      tarea,
+    }
+    console.log(newTarea);
+    alert("tarea añadida");
+    this.setState({todos: [newTarea, ...this.state.todos ]})
+    e.target.name.value = '';
+  }
+
+
   render() {
     return <section>
 
-        <h1>Escribe la tarea:</h1>
-        <input type= "text" />
-        <button>ADD</button>
-        <h1>Lista de todos</h1>
-        <button onClick={this.addTodo}>Add Todo</button>
-        <button onClick={this.removeAllTodos}>Remove All Todos</button>
-        <button onClick={this.restoreTodos}>Restore Todos</button>
+        <h1>Añade una tarea:</h1>
+        <form className="form-container" onSubmit={this.handleSubmit}>
+          <label htmlFor="name"></label>
+          <input type= "text" id="name" name="name"/>
+          <input type="submit" value="ADD" />
+        </form>
+
+        <h1>Lista de tareas</h1>
+        {/* <button onClick={this.addTodo}>Add Todo</button> */}
+        <p>Opciones:</p>
+        <button id="options-button" onClick={this.removeAllTodos}>Borrar todas las tareas</button>
+        <button id="options-button" onClick={this.restoreTodos}>Restaurar todas las tareas</button>
 
         <h1>Tareas:</h1>
         {this.printCards()}
