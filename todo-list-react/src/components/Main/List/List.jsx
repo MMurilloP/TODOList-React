@@ -24,17 +24,6 @@ class List extends Component {
     this.state.todos.map((event, i) => 
       <Item data={event} remove={() => this.deleteToDo(i)} key={uuidv4()} />)
   
-  
-
-  addTodo = () => {
-    const promptodo = prompt("Nombre de la tarea?");
-
-    const newTodo = {
-      tarea: promptodo,
-    };
-
-    this.setState({ todos: [...this.state.todos, newTodo] });
-  }
 
   removeAllTodos = () => {
     this.setState({ todos: [] });
@@ -48,6 +37,9 @@ class List extends Component {
     e.preventDefault();
     console.log(e.target.name.value);
     const tarea = e.target.name.value;
+    if (tarea === '') {
+      return;
+    }
 
     const newTarea = {
       tarea,
