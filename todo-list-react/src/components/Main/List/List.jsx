@@ -4,8 +4,6 @@ import data from "./data.json";
 import { v4 as uuidv4 } from "uuid";
 import './List.css'
 
-console.log(data);
-
 class List extends Component {
   constructor(props) {
     super(props);
@@ -49,7 +47,6 @@ class List extends Component {
     this.setState({todos: [newTarea, ...this.state.todos ]})
     e.target.name.value = '';
   }
-
 
   render() {
     return <section>

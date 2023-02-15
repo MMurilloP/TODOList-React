@@ -1,0 +1,17 @@
+.Nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #3d23a5;
+    color: white;
+    height: 50px;
+  }
+  
+  .Nav a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
