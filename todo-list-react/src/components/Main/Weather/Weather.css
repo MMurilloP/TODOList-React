@@ -1,4 +1,6 @@
-
+.weather-container2{
+  background-image: url("https://cdn.pixabay.com/photo/2016/03/27/07/32/clouds-1282314_1280.jpg");
+}
 
 .weather-container {
     display: inline-block;

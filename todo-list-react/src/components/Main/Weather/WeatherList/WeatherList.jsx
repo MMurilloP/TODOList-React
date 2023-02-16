@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import './Weather.css'
+import './WeatherList.css'
 import { v4 as uuidv4 } from "uuid";
+import WeatherCard from "./WeatherCard/WeatherCard";
 
 
 class Weather extends Component {

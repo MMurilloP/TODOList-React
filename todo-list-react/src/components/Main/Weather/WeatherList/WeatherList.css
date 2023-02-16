@@ -1,0 +1,170 @@
+.weather-container2{
+    background-image: url("https://cdn.pixabay.com/photo/2016/03/27/07/32/clouds-1282314_1280.jpg");
+  }
+  
+  .weather-container {
+      display: inline-block;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      margin: 10px;
+      padding: 10px;
+      text-align: center;
+      width: 200px;
+    }
+    
+    .weather-container img {
+      display: block;
+      margin: 0 auto;
+      width: 80px;
+      height: 80px;
+    }
+    
+    .weather-container p {
+      margin: 10px 0;
+    }
+  
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+      
+  .form-container label {
+      font-weight: bold;
+      margin-bottom: 10px;
+  }
+  
+  .css-input {
+      width: 200px;
+      height: auto;
+      padding: 8px;
+      margin: 10px;
+      font-size: 22px;
+      border-width: 1px;
+      border-color: #CCCCCC;
+      background-color: #FFFFFF;
+      color: #000000;
+      border-style: ridge;
+      border-radius: 10px;
+      box-shadow: 20px 0px 11px rgba(66,66,66,.84);
+      text-shadow: -50px 0px 0px rgba(66,66,66,.0);
+  }
+  .css-input:focus {
+      outline:none;
+  }
+  .css-button-sliding-to-left--red {
+      min-width: 130px;
+      height: 40px;
+      color: #fff;
+      padding: 5px 10px;
+      margin: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      display: inline-block;
+      outline: none;
+      border-radius: 5px;
+      z-index: 0;
+      background: #fff;
+      overflow: hidden;
+      border: 2px solid #d90429;
+      color: #d90429;
+    }
+    .css-button-sliding-to-left--red:hover {
+      color: #fff;
+    }
+    .css-button-sliding-to-left--red:hover:after {
+      width: 100%;
+    }
+    .css-button-sliding-to-left--red:after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      transition: all 0.3s ease;
+      left: 0;
+      top: 0;
+      width: 0;
+      height: 100%;
+      background: #d90429;
+    }
+  
+  
+  .css-button-sliding-to-left--blue {
+      min-width: 130px;
+      margin: 20px;
+      height: 40px;
+      color: #fff;
+      padding: 5px 10px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      display: inline-block;
+      outline: none;
+      border-radius: 5px;
+      z-index: 0;
+      background: #fff;
+      overflow: hidden;
+      border: 2px solid #2c0b8e;
+      color: #2c0b8e;
+    }
+    .css-button-sliding-to-left--blue:hover {
+      color: #fff;
+    }
+    .css-button-sliding-to-left--blue:hover:after {
+      width: 100%;
+    }
+    .css-button-sliding-to-left--blue:after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      transition: all 0.3s ease;
+      left: 0;
+      top: 0;
+      width: 0;
+      height: 100%;
+      background: #2c0b8e;
+    }
+      
+    .css-button-sliding-to-left--green {
+      min-width: 130px;
+      height: 40px;
+      color: #fff;
+      margin: 15px;
+      padding: 5px 10px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      display: inline-block;
+      outline: none;
+      border-radius: 5px;
+      z-index: 0;
+      background: #fff;
+      overflow: hidden;
+      border: 2px solid #57cc99;
+      color: #57cc99;
+    }
+    .css-button-sliding-to-left--green:hover {
+      color: #fff;
+    }
+    .css-button-sliding-to-left--green:hover:after {
+      width: 100%;
+    }
+    .css-button-sliding-to-left--green:after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      transition: all 0.3s ease;
+      left: 0;
+      top: 0;
+      width: 0;
+      height: 100%;
+      background: #57cc99;
+    }  
+  
+    p {
+      font-size: 15px;
+    }
