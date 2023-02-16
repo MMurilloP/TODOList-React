@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import './Weather.css'
+import { v4 as uuidv4 } from "uuid";
+
 
 class Weather extends Component {
   constructor(props) {
@@ -14,6 +16,7 @@ class Weather extends Component {
   async componentDidMount() {
     this.fetchApiWeather();
   }
+  
   async componentDidUpdate(prevProps, prevState) {
     if (prevState.cityName !== this.state.cityName) {
       this.fetchApiWeather();
@@ -31,13 +34,17 @@ class Weather extends Component {
     });
   }
 
-  handleInputChange = (event) => {
-    this.setState({ newCity: event.target.value });
+  handleInputChange = (e) => {
+    this.setState({ newCity: e.target.value });
   };
 
-  handleSubmit = (event) => {
-    event.preventDefault();
+  handleSubmit = (e) => {
+    e.preventDefault();
+    if (this.state.newCity === ""){
+      return
+    }
     this.setState({ cityName: this.state.newCity });
+    
   };
 
   render() {
@@ -55,11 +62,11 @@ class Weather extends Component {
         <h2>La temperatura en: </h2> 
           <h1><strong>{cityName}</strong></h1>
         <h2> en los próximos 5 días:</h2>
-        {appWeather.map((weatherData, index) => (
-          <div className="weather-container" key={index}>
+        {appWeather.map((weatherData) => (
+          <div className="weather-container" key={uuidv4}>
             <p><strong>Fecha y hora: </strong></p>
             <p>{weatherData.dt_txt}</p>
-            <img src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png`} alt="Weather icon" />
+            <img src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png`} alt="icon" />
             <p><strong>Temperatura: </strong>{weatherData.main.temp} ºC</p>
             <p><strong>Descripción: </strong>{weatherData.weather[0].description}</p>
           </div>
