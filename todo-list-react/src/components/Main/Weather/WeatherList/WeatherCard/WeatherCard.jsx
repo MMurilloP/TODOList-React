@@ -17,3 +17,4 @@ class WeatherCard extends Component {
 }
 
 export default WeatherCard;
+

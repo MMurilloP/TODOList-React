@@ -1,8 +1,14 @@
 import React, { Component } from "react";
+import "./Footer.css"
+import WeatherFooter from './WeatherFooter/WeatherFooter'
+
+
 
 class Footer extends Component {
   render() {
-    return <footer></footer>;
+    return <footer>
+      <WeatherFooter/>
+      </footer>;
   }
 }
 

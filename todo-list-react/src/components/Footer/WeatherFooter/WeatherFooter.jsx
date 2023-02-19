@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import './Weather.css'
-import WeatherList from "./WeatherList/WeatherList";
+import WeatherListFooter from "./WeatherListFooter/WeatherListFooter";
 
-class Weather extends Component {
+class WeatherFooter extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -34,10 +33,7 @@ class Weather extends Component {
         const { latitude, longitude } = position.coords;
         this.setState({ latitude, longitude }, this.fetchApiWeather);
       });
-    } else {
-      // La geolocalización no está soportada
-      console.log("La geolocalización no está soportada en este navegador");
-    }
+    } 
   }
   
 
@@ -61,24 +57,17 @@ class Weather extends Component {
   };
 
   render() {
-    const { appWeather, cityName, newCity, latitude, longitude } = this.state;
+    const { appWeather, cityName, latitude, longitude } = this.state;
     const location = cityName ? cityName : `En tu posicion actual: ${latitude}, ${longitude}`;
     return (
       <div className="weather-container2">
-        <h1>Bienvenido a WEATHER</h1>
-        <h2>El tiempo en: </h2>
-        <h1>{location}</h1>
-        <form className="form-container" onSubmit={this.handleSubmit}>
-          <label>Introduce ciudad:
-            <input className="css-input" type="text" value={newCity} onChange={this.handleInputChange} />
-          </label>
-          <button className="css-button-sliding-to-left--blue" type="submit">Buscar</button>
-        </form>
-        <WeatherList appWeather={appWeather} />
+        <h4>El tiempo en: </h4>
+        <h4>{location}</h4>
+        <WeatherListFooter appWeather={appWeather} />
       </div>
     );
   }
   
 }
 
-export default Weather;
+export default WeatherFooter;
