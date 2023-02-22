@@ -1,4 +1,6 @@
-
+/* * {
+  border: solid 1px black;
+} */
 .weather-container {
     display: inline-block;
     background-color: #fff;
@@ -7,7 +9,8 @@
     margin: 10px;
     padding: 10px;
     text-align: center;
-    width: 200px;
+    width: 220px;
+    min-height: 250px;
   }
   
   .weather-container img {

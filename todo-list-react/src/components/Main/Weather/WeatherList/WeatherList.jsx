@@ -7,7 +7,7 @@ class WeatherList extends Component {
     const { appWeather } = this.props;
 
     return (
-      <div>
+      <div className="weather-container-container">
         {appWeather.map((e) => (
           <WeatherCard key={uuidv4()} data={e} />
         ))}
